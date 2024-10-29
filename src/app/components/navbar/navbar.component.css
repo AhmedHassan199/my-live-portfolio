@@ -1,0 +1,54 @@
+nav {
+  backdrop-filter: blur(10px); /* Blurs background for better visibility */
+}
+
+.link {
+  position: relative;
+  color: #D1D5DB; /* Gray-300 */
+  text-decoration: none; /* Remove underline */
+  padding: 0.5rem 1rem; /* Add padding for better click area */
+  border-radius: 5px; /* Rounded corners */
+  overflow: hidden; /* Clip child elements */
+  transition: background 0.3s ease; /* Smooth background transition */
+}
+
+.link:hover {
+  cursor: pointer;
+
+  color: white; /* Change color on hover */
+  background: rgba(255, 255, 255, 0.1); /* Lighten background on hover */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* Soft shadow on hover */
+}
+
+.active {
+  color: white; /* Active link color */
+  font-weight: bold; /* Make active link bold */
+  border-bottom: 2px solid white; /* Underline for active link */
+  transition: border-bottom 0.3s ease; /* Smooth transition for underline */
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -4px; /* Adjust based on your layout */
+  width: 0;
+  height: 2px;
+  background: white; /* Underline color */
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.link:hover::after {
+  width: 100%; /* Full width on hover */
+  left: 0;
+}
+
+/* Optional: Add some media query styles for responsiveness */
+@media (max-width: 640px) {
+  .max-w-6xl {
+    padding: 0 1rem; /* More padding on smaller screens */
+  }
+  .link {
+    padding: 0.5rem; /* Adjust padding on smaller screens */
+  }
+}

@@ -1,0 +1,44 @@
+<nav class="bg-indigo-900 fixed w-full top-0 z-50 shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+    <h1 class="text-white text-3xl font-bold tracking-wide transition-transform duration-300 transform hover:scale-110">Ahmed Mohamed</h1>
+    <ul class="flex space-x-8 text-gray-300">
+      <li>
+        <a
+           routerLink="#hero"
+           routerLinkActive="active"
+           class="link relative group hover:text-white transition duration-300"
+           (click)="scrollTo('hero')">Home</a>
+      </li>
+      <li>
+        <a
+           routerLink="#about"
+           routerLinkActive="active"
+           class="link relative group hover:text-white transition duration-300"
+           (click)="scrollTo('about')">About</a>
+      </li>
+      <li>
+        <a
+           routerLink="#projects"
+           routerLinkActive="active"
+           class="link relative group hover:text-white transition duration-300"
+           (click)="scrollTo('projects')">Projects</a>
+      </li>
+      <li>
+        <a
+           routerLink="#skills"
+           routerLinkActive="active"
+           class="link relative group hover:text-white transition duration-300"
+           (click)="scrollTo('skills')">Skills</a>
+      </li>
+      <li>
+        <a
+           routerLink="#contact"
+           routerLinkActive="active"
+           class="link relative group hover:text-white transition duration-300"
+           (click)="scrollTo('contact')">Contact</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
