@@ -5,16 +5,15 @@ import { ActivatedRoute, RouterLinkActive } from '@angular/router';
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [NgClass , RouterLinkActive],
+  imports: [NgClass, RouterLinkActive],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.css'
+  styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
+  isMobileMenuOpen = false;
+
   toggleNavbar() {
-    const menu = document.getElementById('navbar-menu');
-    if (menu) {
-      menu.classList.toggle('hidden');
-    }
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
   }
 
   scrollTo(section: string) {
@@ -24,4 +23,7 @@ export class NavbarComponent {
     }
   }
 
+  closeMenu() {
+    this.isMobileMenuOpen = false;
+  }
 }
